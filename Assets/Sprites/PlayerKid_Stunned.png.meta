@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: 092a89e59901b2147b7a7f2c2bb6629d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3792538714506719590
+    second: PlayerKid_Stunned_0
+  - first:
+      213: -8807782249793854761
+    second: PlayerKid_Stunned_1
+  - first:
+      213: 6876220218485838805
+    second: PlayerKid_Stunned_2
+  - first:
+      213: -4657476439858852616
+    second: PlayerKid_Stunned_3
+  - first:
+      213: 4560269483722399808
+    second: PlayerKid_Stunned_4
+  - first:
+      213: 2603968059130587081
+    second: PlayerKid_Stunned_5
+  - first:
+      213: 7504080578832304203
+    second: PlayerKid_Stunned_6
+  - first:
+      213: -3484077062636885962
+    second: PlayerKid_Stunned_7
+  - first:
+      213: -9079652933945666692
+    second: PlayerKid_Stunned_8
+  - first:
+      213: 2584178195466704634
+    second: PlayerKid_Stunned_9
+  - first:
+      213: 3070641017812537338
+    second: PlayerKid_Stunned_10
+  - first:
+      213: 6800597151706432760
+    second: PlayerKid_Stunned_11
+  - first:
+      213: -2300498512233535843
+    second: PlayerKid_Stunned_12
+  - first:
+      213: -4597395496894836970
+    second: PlayerKid_Stunned_13
+  - first:
+      213: 7194610655292061752
+    second: PlayerKid_Stunned_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayerKid_Stunned_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 213
+        height: 1536
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 661f61bfdddc1a430800000000000000
+      internalID: 3792538714506719590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKid_Stunned_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 1127
+        width: 596
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d2eb0e95b874c580800000000000000
+      internalID: -8807782249793854761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKid_Stunned_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 990
+        width: 173
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d315306bdd3d6f50800000000000000
+      internalID: 6876220218485838805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKid_Stunned_3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 80
+        width: 641
+        height: 1105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fc4674bad15d5fb0800000000000000
+      internalID: -4657476439858852616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKid_Stunned_4
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 0
+        width: 798
+        height: 1008
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 040e3512fe4594f30800000000000000
+      internalID: 4560269483722399808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKid_Stunned_5
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1175
+        width: 47
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c721f24727232420800000000000000
+      internalID: 2603968059130587081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKid_Stunned_6
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1202
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4805333789d32860800000000000000
+      internalID: 7504080578832304203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKid_Stunned_7
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1175
+        width: 192
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6382177fe5216afc0800000000000000
+      internalID: -3484077062636885962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKid_Stunned_8
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1232
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c73d55c33c79ef180800000000000000
+      internalID: -9079652933945666692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKid_Stunned_9
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 1227
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af65a119068dcd320800000000000000
+      internalID: 2584178195466704634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKid_Stunned_10
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1159
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: affc57b9cbb1d9a20800000000000000
+      internalID: 3070641017812537338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKid_Stunned_11
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1201
+        width: 62
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f4ceff0413906e50800000000000000
+      internalID: 6800597151706432760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKid_Stunned_12
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1081
+        width: 67
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d96610caaccf210e0800000000000000
+      internalID: -2300498512233535843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKid_Stunned_13
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 1207
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61f4a935725c230c0800000000000000
+      internalID: -4597395496894836970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKid_Stunned_14
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 690
+        width: 261
+        height: 846
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8387ce5b54468d360800000000000000
+      internalID: 7194610655292061752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PlayerKid_Stunned_0: 3792538714506719590
+      PlayerKid_Stunned_1: -8807782249793854761
+      PlayerKid_Stunned_10: 3070641017812537338
+      PlayerKid_Stunned_11: 6800597151706432760
+      PlayerKid_Stunned_12: -2300498512233535843
+      PlayerKid_Stunned_13: -4597395496894836970
+      PlayerKid_Stunned_14: 7194610655292061752
+      PlayerKid_Stunned_2: 6876220218485838805
+      PlayerKid_Stunned_3: -4657476439858852616
+      PlayerKid_Stunned_4: 4560269483722399808
+      PlayerKid_Stunned_5: 2603968059130587081
+      PlayerKid_Stunned_6: 7504080578832304203
+      PlayerKid_Stunned_7: -3484077062636885962
+      PlayerKid_Stunned_8: -9079652933945666692
+      PlayerKid_Stunned_9: 2584178195466704634
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
