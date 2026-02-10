@@ -1,60 +1,18 @@
-//using UnityEngine;
-
-//public class GrumpyKid : MonoBehaviour
-//{
-//    public float moveSpeed = 3f;
-//    public int penaltyScore = 5;
-
-//    private Transform player;
-
-//    void Start()
-//    {
-//        Debug.Log("Start GrumpyKid");
-//        player = GameObject.FindGameObjectWithTag("Player").transform;
-//    }
-
-//    void Update()
-//    {
-//        if (player == null) return;
-
-//        Vector3 direction = (player.position - transform.position).normalized;
-//        transform.position += direction * moveSpeed * Time.deltaTime;
-
-//        if (transform.position.x < -10f || transform.position.x > 10f)
-//        {
-//            Destroy(gameObject);
-//            Debug.Log("Update Destroy GrumpyKid: " + transform.position.x);
-//        }
-//    }
-
-//    private void OnTriggerEnter2D(Collider2D other)
-//    {
-//        if (other.CompareTag("Player"))
-//        {
-//            GameManager.Instance.AddScore(-penaltyScore);
-//            Destroy(gameObject);
-//            Debug.Log("OnTriggerEnter2D Destroy GrumpyKid: ");
-//        }
-//    }
-
-//    void LateUpdate()
-//    {
-//        transform.position = new Vector3(
-//            transform.position.x,
-//            -1.5f,   // SAME Y as your ground
-//            transform.position.z
-//        );
-//    }
-//}
-
 using UnityEngine;
 
 public class GrumpyKid : MonoBehaviour
 {
-    public float moveSpeed = 3f;
+    public float moveSpeed = 995f;
 
     private Rigidbody2D rb;
-    private int direction; // -1 = left, +1 = right
+    private int direction;
+
+    private bool isFrozen = false;
+
+    private SpriteRenderer spriteRenderer;
+
+    [Header("End Game")]
+    public Sprite endGameSprite; // yawning / lying down sprite (assign later)
 
     public void Init(int moveDirection)
     {
@@ -65,20 +23,49 @@ public class GrumpyKid : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0f;
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
+        if (isFrozen)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
+
         rb.linearVelocity = new Vector2(direction * moveSpeed, 0f);
+    }
+
+    public void Freeze()
+    {
+        isFrozen = true;
+
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.simulated = false;
+        }
+
+        if (spriteRenderer != null && endGameSprite != null)
+        {
+            spriteRenderer.sprite = endGameSprite;
+        }
     }
 
     void OnBecameInvisible()
     {
-        Destroy(gameObject);
+        if (!isFrozen)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (isFrozen) return;
+
         if (other.CompareTag("Player"))
         {
             PlayerController player = other.GetComponent<PlayerController>();

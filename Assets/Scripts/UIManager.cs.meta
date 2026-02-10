@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6285b82a0b9e7bb42b211591862181de
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - darkOverlay: {instanceID: 0}
+  - endGamePanel: {instanceID: 0}
+  - stickerFX: {fileID: 6388297888869762693, guid: f445b63f32ba4a84a9067178e69c5569, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

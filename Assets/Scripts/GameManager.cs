@@ -15,9 +15,15 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI scoreText;
 
+    public Color normalTimerColor = Color.white;
+    public Color warningTimerColor = Color.red;
+
+    private bool isFlashing = false;
+
     public int hitPenalty = 2;
     public PlayerController player;
 
+    public bool IsGameEnded { get; private set; }
 
     void Awake()
     {
@@ -30,11 +36,17 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         timer = gameTime;
+        timerText.color = normalTimerColor;
         StartGame();
     }
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            EndGame();
+        }
+
         if (!isPlaying) return;
 
         timer -= Time.deltaTime;
@@ -53,15 +65,27 @@ public class GameManager : MonoBehaviour
 
     void EndGame()
     {
-        isPlaying = false;
-        Debug.Log("Game Over! Score: " + score);
-        // Game Over UI later
+        if (IsGameEnded) return;
+        IsGameEnded = true;
+
+        FreezePlayer();
+        FreezeAllGrumpyKids();
+        StopToySpawning();
+        StopTimer();
+
+        UIManager.Instance.ShowEndGameUI();
+
     }
 
     void UpdateTimerUI()
     {
         if (timerText == null) return;
         timerText.text = Mathf.Ceil(timer).ToString();
+        if (timer <= 5f && !isFlashing)
+        {
+            isFlashing = true;
+            StartCoroutine(FlashTimer());
+        }
     }
 
     public void AddScore(int amount)
@@ -82,6 +106,61 @@ public class GameManager : MonoBehaviour
     {
         AddScore(-hitPenalty);
         player.Stun();
+    }
+
+    System.Collections.IEnumerator FlashTimer()
+    {
+        while (timer > 0f)
+        {
+            timerText.color = warningTimerColor;
+            yield return new WaitForSeconds(0.3f);
+
+            timerText.color = normalTimerColor;
+            yield return new WaitForSeconds(0.3f);
+        }
+        timerText.color = warningTimerColor;
+    }
+
+    void FreezeAllGrumpyKids()
+    {
+        GrumpyKid[] grumpyKids = FindObjectsByType<GrumpyKid>(FindObjectsSortMode.None);
+
+        foreach (GrumpyKid kid in grumpyKids)
+        {
+            kid.Freeze();
+        }
+    }
+
+    void StopTimer()
+    {
+        isPlaying = false;
+        timer = 0f;
+    }
+
+    void FreezePlayer()
+    {
+        if (player != null)
+        {
+            player.Freeze();
+        }
+    }
+
+    public void Freeze()
+    {
+        enabled = false;
+    }
+
+
+    public ToySpawner toySpawner;
+
+    void StopToySpawning()
+    {
+        ToySpawner[] spawners = FindObjectsByType<ToySpawner>(FindObjectsSortMode.None);
+
+        foreach (ToySpawner spawner in spawners)
+        {
+            spawner.StopSpawning();
+        }
     }
 
 }

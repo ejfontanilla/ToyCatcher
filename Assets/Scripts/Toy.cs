@@ -4,8 +4,7 @@ public enum ToyType
 {
     Ambulance,
     FireTruck,
-    Police,
-    Spider
+    Police
 }
 
 public class Toy : MonoBehaviour
@@ -13,10 +12,10 @@ public class Toy : MonoBehaviour
     [SerializeField] private float destroyYPosition = -6f;
     public ToyType toyType;
     public int scoreValue = 1;
+    public ParticleSystem collectStickerFX;
 
     void Update()
     {
-        // Destroy the toy if it falls below the screen
         if (transform.position.y < destroyYPosition)
         {
             Destroy(gameObject);
@@ -28,7 +27,20 @@ public class Toy : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GameManager.Instance.AddScore(scoreValue);
+
+            if (collectStickerFX != null)
+            {
+                ParticleSystem fx = Instantiate(
+                    collectStickerFX,
+                    transform.position,
+                    Quaternion.identity
+                );
+
+                Destroy(fx.gameObject, 1.5f);
+            }
+
             Destroy(gameObject);
         }
     }
+
 }

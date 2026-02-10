@@ -25,7 +25,8 @@ public class PlayerController : MonoBehaviour
     private bool isStunned = false;
     public bool IsStunned => isStunned;
 
-
+    public float floorSlideDuration = 0.25f;
+    private bool isSliding = false;
 
     void Start()
     {
@@ -40,58 +41,31 @@ public class PlayerController : MonoBehaviour
             sr.sprite = normalSprite;
         }
 
-
-
-        Debug.Log("topfloory start: " + topFloor.position.y);
-        Debug.Log("bottomfloory start: " + bottomFloor.position.y);
-
-        // Start on bottom floor
-        //Vector3 pos = transform.position;
-        //pos.y = bottomFloor.position.y;
-        //transform.position = pos;
-        //Debug.Log("start transform position:" + pos);
-
-        // Start on bottom floor
         rb.position = new Vector2(
             rb.position.x,
             bottomFloor.position.y
         );
-        Debug.Log("start transform position:" + rb.position);
     }
 
     void Update()
     {
-        // Horizontal movement
+        if (isSliding) return;
+
         float moveX = Input.GetAxis("Horizontal");
         rb.linearVelocity = new Vector2(moveX * moveSpeed, 0f);
 
-        // Flip sprite
         if (moveX > 0)
             transform.localScale = new Vector3(Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
         else if (moveX < 0)
             transform.localScale = new Vector3(-Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
 
-        // Switch floors
         if (Input.GetKeyDown(KeyCode.Space))
         {
             onTopFloor = !onTopFloor;
 
-            //Vector3 pos = transform.position;
-            //pos.y = onTopFloor ? topFloor.position.y : bottomFloor.position.y;
-            //transform.position = pos;
-            //Debug.Log("Change floor  is it on top?" + onTopFloor + " transform position: " + pos);
-
-            rb.position = new Vector2(
-                rb.position.x,
-                onTopFloor ? topFloor.position.y : bottomFloor.position.y
-            );
-            Debug.Log("Change floor  is it on top?" + onTopFloor + " transform position: " + rb.position);
+            StartCoroutine(SlideToFloor(onTopFloor ? topFloor.position.y : bottomFloor.position.y));
+            if (isSliding) return;
         }
-
-        // Clamp X only
-        //Vector3 clampedPos = transform.position;
-        //clampedPos.x = Mathf.Clamp(clampedPos.x, minX, maxX);
-        //transform.position = clampedPos;
 
         float clampedX = Mathf.Clamp(rb.position.x, minX, maxX);
         rb.position = new Vector2(clampedX, rb.position.y);
@@ -122,6 +96,40 @@ public class PlayerController : MonoBehaviour
 
         sr.sprite = normalSprite;
         isStunned = false;
+    }
+
+    System.Collections.IEnumerator SlideToFloor(float targetY)
+    {
+        if (isSliding) yield break;
+
+        isSliding = true;
+
+        Vector2 startPos = transform.position;
+        Vector2 endPos = new Vector2(startPos.x, targetY);
+
+        float elapsed = 0f;
+
+        while (elapsed < floorSlideDuration)
+        {
+            float t = elapsed / floorSlideDuration;
+            t = Mathf.SmoothStep(0f, 1f, t);
+            transform.position = Vector2.Lerp(startPos, endPos, t);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.position = endPos;
+        isSliding = false;
+    }
+
+    public void Freeze()
+    {
+        enabled = false;
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+            rb.linearVelocity = Vector2.zero;
     }
 
 }

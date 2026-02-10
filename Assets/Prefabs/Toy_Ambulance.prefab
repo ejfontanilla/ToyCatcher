@@ -136,6 +136,7 @@ MonoBehaviour:
   destroyYPosition: -6
   toyType: 0
   scoreValue: 1
+  collectStickerFX: {fileID: 6388297888869762693, guid: f445b63f32ba4a84a9067178e69c5569, type: 3}
 --- !u!60 &-8339005043610017648
 PolygonCollider2D:
   m_ObjectHideFlags: 0

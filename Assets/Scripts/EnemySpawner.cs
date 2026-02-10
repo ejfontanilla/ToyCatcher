@@ -21,12 +21,10 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnGrumpyKid()
     {
-        // Choose lane
         float laneY = Random.value > 0.5f
             ? topFloor.position.y
             : bottomFloor.position.y;
 
-        // Choose side
         bool spawnFromLeft = Random.value > 0.5f;
 
         float spawnX = spawnFromLeft ? -spawnOffsetX : spawnOffsetX;
@@ -36,10 +34,8 @@ public class EnemySpawner : MonoBehaviour
 
         currentEnemy = Instantiate(grumpyKidPrefab, spawnPos, Quaternion.identity);
 
-        // Set movement direction
         currentEnemy.GetComponent<GrumpyKid>().Init(direction);
 
-        //Flip sprite based on spawn side
         Vector3 scale = currentEnemy.transform.localScale;
         scale.x = spawnFromLeft
             ? -Mathf.Abs(scale.x)
