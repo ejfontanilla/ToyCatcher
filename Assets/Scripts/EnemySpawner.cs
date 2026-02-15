@@ -42,5 +42,12 @@ public class EnemySpawner : MonoBehaviour
             : Mathf.Abs(scale.x);
 
         currentEnemy.transform.localScale = scale;
+
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySFX(
+                SoundManager.Instance.grumpyEnterSound
+            );
+        }
     }
 }

@@ -64,6 +64,12 @@ public class PlayerController : MonoBehaviour
             onTopFloor = !onTopFloor;
 
             StartCoroutine(SlideToFloor(onTopFloor ? topFloor.position.y : bottomFloor.position.y));
+            if (SoundManager.Instance != null)
+            {
+                SoundManager.Instance.PlaySFX(
+                    SoundManager.Instance.laneSwitchSound
+                );
+            }
             if (isSliding) return;
         }
 

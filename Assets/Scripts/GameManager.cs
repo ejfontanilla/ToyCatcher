@@ -68,6 +68,9 @@ public class GameManager : MonoBehaviour
         if (IsGameEnded) return;
         IsGameEnded = true;
 
+        SoundManager.Instance.PlaySFX(
+        SoundManager.Instance.gameOverSound);
+
         FreezePlayer();
         FreezeAllGrumpyKids();
         StopToySpawning();
@@ -92,6 +95,12 @@ public class GameManager : MonoBehaviour
     {
         score += amount;
         UpdateScoreUI();
+        if (amount > 0)
+        {
+            SoundManager.Instance.PlaySFX(
+                SoundManager.Instance.catchSound
+            );
+        }
     }
 
     private void UpdateScoreUI()
@@ -105,6 +114,14 @@ public class GameManager : MonoBehaviour
     public void PlayerHit()
     {
         AddScore(-hitPenalty);
+
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySFX(
+                SoundManager.Instance.hitSound
+            );
+        }
+
         player.Stun();
     }
 

@@ -25,6 +25,12 @@ public class ToySpawner : MonoBehaviour
             new Vector3(randomX, spawnY, 0),
             Quaternion.identity
         );
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySFX(
+                SoundManager.Instance.toySpawnSound, 0.1f
+            );
+        }
     }
 
     public void StopSpawning()
