@@ -2,9 +2,9 @@ using UnityEngine;
 
 public enum ToyType
 {
-    Ambulance,
+    GreenDinosaur,
     FireTruck,
-    Police
+    PinkBunny
 }
 
 public class Toy : MonoBehaviour

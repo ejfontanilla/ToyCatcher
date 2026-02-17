@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9095873259013200980}
   - component: {fileID: -8339005043610017648}
   m_Layer: 0
-  m_Name: Toy_FireTruck
+  m_Name: Toy_GreenDinosaur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0032, y: 3.9615, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.20159017, z: 0.05725913}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -9146100675657016200, guid: 3e618d69063b3dc4290153504fe8e27c, type: 3}
+  m_Sprite: {fileID: 5082965699216201717, guid: 02db700adf534374899601ec083bc70a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Toy
   destroyYPosition: -6
-  toyType: 1
+  toyType: 0
   scoreValue: 1
   collectStickerFX: {fileID: 6388297888869762693, guid: f445b63f32ba4a84a9067178e69c5569, type: 3}
 --- !u!60 &-8339005043610017648
@@ -175,7 +175,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.24, y: 10.24}
+    oldSize: {x: 1.76, y: 1.51}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

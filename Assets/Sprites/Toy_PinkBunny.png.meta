@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3e618d69063b3dc4290153504fe8e27c
+guid: 00bd5dab6e5c4e84b80bbba919dd34ac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9146100675657016200
-    second: Toy_FireTruck_0
+      213: -8533337553842738833
+    second: Toy_PinkBunny_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Toy_FireTruck_0
+      name: Toy_PinkBunny_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1024
+        x: 3
+        y: 1
+        width: 120
+        height: 196
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 87cd083c4e5821180800000000000000
-      internalID: -9146100675657016200
+      spriteID: f69e3b2d4be739980800000000000000
+      internalID: -8533337553842738833
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Toy_FireTruck_0: -9146100675657016200
+      Toy_PinkBunny_0: -8533337553842738833
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

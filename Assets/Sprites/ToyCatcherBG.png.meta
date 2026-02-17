@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 596e1d2671f9b784c98c00da230ef6aa
+guid: b76b4dc79069bb5499b5f709c2f4741b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 285810041316537904
-    second: ambulance_0
+      213: 1686448775954288888
+    second: ToyCatcherBG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ambulance_0
+      name: ToyCatcherBG_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 38
-        height: 21
+        width: 1536
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 03679e1e7b667f300800000000000000
-      internalID: 285810041316537904
+      spriteID: 8f0d5aef938776710800000000000000
+      internalID: 1686448775954288888
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ambulance_0: 285810041316537904
+      ToyCatcherBG_0: 1686448775954288888
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

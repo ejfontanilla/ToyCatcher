@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 246bd60c72d1af042b4c6c78c3ba8fe1
+guid: 02db700adf534374899601ec083bc70a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -347627570514976070
-    second: firetruck_0
+      213: 5082965699216201717
+    second: Toy_GreenDinosaur_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: firetruck_0
+      name: Toy_GreenDinosaur_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 44
-        height: 21
+        width: 176
+        height: 151
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ab2a251019afc2bf0800000000000000
-      internalID: -347627570514976070
+      spriteID: 5f7d64b6f525a8640800000000000000
+      internalID: 5082965699216201717
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      firetruck_0: -347627570514976070
+      Toy_GreenDinosaur_0: 5082965699216201717
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

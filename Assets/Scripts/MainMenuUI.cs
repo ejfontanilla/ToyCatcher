@@ -5,6 +5,6 @@ public class MainMenuUI : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("DayCareStage");
+        SceneManager.LoadScene("StageSelect");
     }
 }

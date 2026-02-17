@@ -150,9 +150,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ToySpawner
   spawnY: 4
   toyPrefabs:
-  - {fileID: 6720912522869339460, guid: 4f21bb8b851893f4caef3f895e34caca, type: 3}
-  - {fileID: 6720912522869339460, guid: 0c928df8336c0e24f9cf97bc85b23211, type: 3}
-  - {fileID: 6720912522869339460, guid: 7fe7395890749bc4bbe0aa165a4a03f4, type: 3}
+  - {fileID: 6720912522869339460, guid: 91049fde747a8574bb920f41cafe656c, type: 3}
+  - {fileID: 6720912522869339460, guid: 31b8e2e9f5b877d40a3de615ece3a77d, type: 3}
+  - {fileID: 6720912522869339460, guid: bf08601d129d4c847a5c615a0175e0d9, type: 3}
   spawnRate: 1.5
 --- !u!4 &70003080
 Transform:
@@ -1353,6 +1353,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 849874754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1122333197
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2901689755273606341, guid: 4855a852f74006345bf3f00d4f4c5912, type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6483257130896721368, guid: 4855a852f74006345bf3f00d4f4c5912, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6483257130896721368, guid: 4855a852f74006345bf3f00d4f4c5912, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.23689
+      objectReference: {fileID: 0}
+    - target: {fileID: 6483257130896721368, guid: 4855a852f74006345bf3f00d4f4c5912, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6483257130896721368, guid: 4855a852f74006345bf3f00d4f4c5912, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6483257130896721368, guid: 4855a852f74006345bf3f00d4f4c5912, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6483257130896721368, guid: 4855a852f74006345bf3f00d4f4c5912, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6483257130896721368, guid: 4855a852f74006345bf3f00d4f4c5912, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6483257130896721368, guid: 4855a852f74006345bf3f00d4f4c5912, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6483257130896721368, guid: 4855a852f74006345bf3f00d4f4c5912, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6483257130896721368, guid: 4855a852f74006345bf3f00d4f4c5912, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4855a852f74006345bf3f00d4f4c5912, type: 3}
 --- !u!1 &1179327152
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,3 +2152,4 @@ SceneRoots:
   - {fileID: 1088920081}
   - {fileID: 1198309758}
   - {fileID: 211011809}
+  - {fileID: 1122333197}
