@@ -13,6 +13,9 @@ public class UIManager : MonoBehaviour
     [Header("End Game Text")]
     public TextMeshProUGUI levelCompleteText;
 
+    public GameObject gameOverPanel;
+    public GameObject quitConfirmPanel;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -47,6 +50,11 @@ public class UIManager : MonoBehaviour
             fx.Play();
             Destroy(fx.gameObject, fx.main.duration + fx.main.startLifetime.constantMax);
         }
+    }
+
+    public void ShowGameOver()
+    {
+        gameOverPanel.SetActive(true);
     }
 
     IEnumerator LevelCompletePop()
@@ -92,6 +100,16 @@ public class UIManager : MonoBehaviour
         }
 
         rect.localScale = finalScale;
+    }
+
+    public void ShowQuitConfirmation()
+    {
+        quitConfirmPanel.SetActive(true);
+    }
+
+    public void HideQuitConfirmation()
+    {
+        quitConfirmPanel.SetActive(false);
     }
 
 }

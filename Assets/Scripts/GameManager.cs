@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -24,6 +25,8 @@ public class GameManager : MonoBehaviour
     public PlayerController player;
 
     public bool IsGameEnded { get; private set; }
+
+    public ToySpawner toySpawner;
 
     void Awake()
     {
@@ -168,7 +171,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public ToySpawner toySpawner;
+
 
     void StopToySpawning()
     {
@@ -179,5 +182,19 @@ public class GameManager : MonoBehaviour
             spawner.StopSpawning();
         }
     }
+
+    public void RestartStage()
+    {
+        //SoundManager.Instance.PlayUIClick();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void QuitToStageSelect()
+    {
+        //SoundManager.Instance.PlayUIClick();
+        SceneManager.LoadScene("StageSelect");
+    }
+
+  
 
 }

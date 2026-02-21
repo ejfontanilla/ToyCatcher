@@ -8,6 +8,11 @@ public class StageSelectManager : MonoBehaviour
         SceneManager.LoadScene("DayCareStage");
     }
 
+    public void LoadPlaygroundStage()
+    {
+        SceneManager.LoadScene("PlaygroundStage");
+    }
+
     public void GoBackToMenu()
     {
         SceneManager.LoadScene("MainMenu");
