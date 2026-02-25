@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 
     public Sprite normalSprite;
     public Sprite stunnedSprite;
+    public Sprite admireSprite;
     public float stunDuration = 1f;
     public AudioSource hitSound;
 
@@ -33,7 +34,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         originalScale = transform.localScale;
 
-        
+        Debug.Log(originalScale);
         sr = GetComponent<SpriteRenderer>();
 
         if (normalSprite != null)
@@ -45,10 +46,17 @@ public class PlayerController : MonoBehaviour
             rb.position.x,
             bottomFloor.position.y
         );
+        Debug.Log(rb.position);
     }
 
     void Update()
     {
+        if (isStunned)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
+
         if (isSliding) return;
 
         float moveX = Input.GetAxis("Horizontal");
@@ -62,39 +70,33 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             onTopFloor = !onTopFloor;
-
             StartCoroutine(SlideToFloor(onTopFloor ? topFloor.position.y : bottomFloor.position.y));
+
             if (SoundManager.Instance != null)
             {
                 SoundManager.Instance.PlaySFX(
                     SoundManager.Instance.laneSwitchSound
                 );
             }
-            if (isSliding) return;
         }
 
-        float clampedX = Mathf.Clamp(rb.position.x, minX, maxX);
-        rb.position = new Vector2(clampedX, rb.position.y);
-
-        if (isStunned)
-        {
-            rb.linearVelocity = Vector2.zero;
-            return;
-        }
-
+        Vector2 pos = rb.position;
+        pos.x = Mathf.Clamp(pos.x, minX, maxX);
+        rb.MovePosition(pos);
     }
 
-    public void Stun()
+    public void React(Sprite reactionSprite)
     {
         if (!isStunned)
-            StartCoroutine(StunRoutine());
+            StartCoroutine(ReactionRoutine(reactionSprite));
     }
 
-    IEnumerator StunRoutine()
+    IEnumerator ReactionRoutine(Sprite reactionSprite)
     {
         isStunned = true;
 
-        sr.sprite = stunnedSprite;
+        sr.sprite = reactionSprite;
+
         if (hitSound != null)
             hitSound.Play();
 
@@ -126,6 +128,7 @@ public class PlayerController : MonoBehaviour
         }
 
         transform.position = endPos;
+        //rb.MovePosition(endPos);
         isSliding = false;
     }
 

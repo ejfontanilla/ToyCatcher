@@ -6,17 +6,19 @@ public class GrumpyKid : MonoBehaviour
 
     private Rigidbody2D rb;
     private int direction;
-
     private bool isFrozen = false;
+    private bool isTopLane;
 
     private SpriteRenderer spriteRenderer;
+    private EnemySpawner spawner;
 
     [Header("End Game")]
-    public Sprite endGameSprite; // yawning / lying down sprite (assign later)
+    public Sprite endGameSprite;
 
-    public void Init(int moveDirection)
+    public void Init(int moveDirection, bool topLane)
     {
         direction = moveDirection;
+        isTopLane = topLane;
     }
 
     void Start()
@@ -25,6 +27,8 @@ public class GrumpyKid : MonoBehaviour
         rb.gravityScale = 0f;
 
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        spawner = FindObjectOfType<EnemySpawner>();
     }
 
     void Update()
@@ -58,6 +62,11 @@ public class GrumpyKid : MonoBehaviour
     {
         if (!isFrozen)
         {
+            if (spawner != null)
+            {
+                spawner.NotifyEnemyDestroyed(isTopLane);
+            }
+
             Destroy(gameObject);
         }
     }
@@ -77,4 +86,3 @@ public class GrumpyKid : MonoBehaviour
         }
     }
 }
-

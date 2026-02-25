@@ -596,6 +596,9 @@ MonoBehaviour:
   topFloor: {fileID: 1179327155}
   bottomFloor: {fileID: 921376417}
   spawnOffsetX: 10
+  spawnInterval: 2
+  allowMultipleEnemies: 0
+  maxEnemies: 1
 --- !u!4 &486144810
 Transform:
   m_ObjectHideFlags: 0
@@ -1453,17 +1456,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.4805415, y: 0.9471792}
+  m_Offset: {x: -0.05, y: 0.2}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.49, y: 14.7}
+    oldSize: {x: 1.44, y: 2.44}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.961083, y: 1.9471638}
+  m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
 --- !u!212 &849874753
 SpriteRenderer:
@@ -1514,7 +1517,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3372741223209629391, guid: 4ff1076f732833b4381e924542c11be3, type: 3}
+  m_Sprite: {fileID: 1593075649719586529, guid: 75d29acdebc1f3540bf384c01593479d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1534,7 +1537,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.223, y: -3.5, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.2858281, z: 0.16952026}
+  m_LocalScale: {x: 1.5, y: 1.0718554, z: 0.63570094}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1114538267}
@@ -1557,8 +1560,9 @@ MonoBehaviour:
   bottomFloor: {fileID: 921376417}
   minX: -8
   maxX: 8
-  normalSprite: {fileID: 3372741223209629391, guid: 4ff1076f732833b4381e924542c11be3, type: 3}
-  stunnedSprite: {fileID: -4657476439858852616, guid: 092a89e59901b2147b7a7f2c2bb6629d, type: 3}
+  normalSprite: {fileID: 1593075649719586529, guid: 75d29acdebc1f3540bf384c01593479d, type: 3}
+  stunnedSprite: {fileID: 6555681010207831641, guid: 720d0b33fc742f14a9f0f22b97109c23, type: 3}
+  admireSprite: {fileID: 0}
   stunDuration: 2
   hitSound: {fileID: 0}
   floorSlideDuration: 0.25

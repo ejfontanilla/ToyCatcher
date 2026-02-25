@@ -125,7 +125,7 @@ public class GameManager : MonoBehaviour
             );
         }
 
-        player.Stun();
+        player.React(player.stunnedSprite); ;
     }
 
     System.Collections.IEnumerator FlashTimer()

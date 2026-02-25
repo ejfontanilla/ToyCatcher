@@ -258,6 +258,10 @@ PrefabInstance:
       propertyPath: backgroundMusic
       value: 
       objectReference: {fileID: 8300000, guid: 2f689cb74d8625a4f9abd201f6d3bab9, type: 3}
+    - target: {fileID: 5525870056000331717, guid: 4855a852f74006345bf3f00d4f4c5912, type: 3}
+      propertyPath: playgroundMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: c104d7c9cf67b0448acccaf987db9350, type: 3}
     - target: {fileID: 6483257130896721368, guid: 4855a852f74006345bf3f00d4f4c5912, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

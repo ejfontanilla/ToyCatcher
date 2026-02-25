@@ -12,6 +12,7 @@ public class SoundManager : MonoBehaviour
     [Header("Audio Clips")]
     public AudioClip backgroundMusic;
     public AudioClip daycareMusic;
+    public AudioClip playgroundMusic;
     public AudioClip catchSound;
     public AudioClip gameOverSound;
     public AudioClip buttonClickSound;
@@ -54,6 +55,10 @@ public class SoundManager : MonoBehaviour
 
             case "DayCareStage":
                 PlayMusic(daycareMusic);
+                break;
+
+            case "PlaygroundStage":
+                PlayMusic(playgroundMusic);
                 break;
         }
     }
