@@ -14,6 +14,7 @@ public class ToySpawner : MonoBehaviour
 
     void SpawnToy()
     {
+        if (!GameManager.Instance.isPlaying) return;
         if (GameManager.Instance != null && GameManager.Instance.IsGameEnded)
             return;
 

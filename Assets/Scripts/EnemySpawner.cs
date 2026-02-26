@@ -23,6 +23,8 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
+        if (!GameManager.Instance.isPlaying) return;
+
         spawnTimer += Time.deltaTime;
 
         if (spawnTimer >= spawnInterval)

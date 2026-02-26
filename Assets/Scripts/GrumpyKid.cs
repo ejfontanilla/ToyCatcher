@@ -33,7 +33,7 @@ public class GrumpyKid : MonoBehaviour
 
     void Update()
     {
-        if (isFrozen)
+        if (!GameManager.Instance.isPlaying || isFrozen)
         {
             rb.linearVelocity = Vector2.zero;
             return;

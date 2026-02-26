@@ -22,11 +22,13 @@ public class GameManager : MonoBehaviour
     private bool isFlashing = false;
 
     public int hitPenalty = 2;
-    public PlayerController player;
+    private PlayerController player;
 
     public bool IsGameEnded { get; private set; }
 
     public ToySpawner toySpawner;
+
+    public DialogueData introDialogue;
 
     void Awake()
     {
@@ -38,9 +40,11 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        player = FindFirstObjectByType<PlayerController>();
         timer = gameTime;
         timerText.color = normalTimerColor;
-        StartGame();
+        DialogueManager.Instance.StartDialogue(introDialogue);
+        //StartGame();
     }
 
     void Update()
@@ -61,7 +65,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void StartGame()
+    public void StartGame()
     {
         isPlaying = true;
     }
