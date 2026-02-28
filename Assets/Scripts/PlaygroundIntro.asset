@@ -10,16 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd1acd213cc80424485835239f360308, type: 3}
-  m_Name: DayCareIntro
+  m_Name: PlaygroundIntro
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Player
     portrait: {fileID: 5694967420482491223, guid: 616d478e8b3420b41ab007c8f1c78693, type: 3}
-    sentence: Hello there! I love toys! And I'm going to collect all the toys in
-      this daycare! Can you help me?
+    sentence: Wow, the playground! I bet there are new toys here and the kids are
+      friendly.
+  - characterName: Player
+    portrait: {fileID: -1444289971782987038, guid: 6e0eeb92ee1ebce46945b94f371d6587, type: 3}
+    sentence: Look at those cute squirrels. I need to avoid them to focus on catching
+      the toys.
   - characterName: Grumpy Kid
     portrait: {fileID: 4279385814704311289, guid: 9d555c2748c914240b3fe4f3f0a7f590, type: 3}
-    sentence: What toys? I gonna snatch those toys from you!
+    sentence: 'Oh lookie here! I''m cuter than those rodents! '
   - characterName: Player
     portrait: {fileID: -3020085772389621745, guid: c607f502019573a43bdafbc864ceed02, type: 3}
-    sentence: Oh my, he looks grumpy and mean. I got to avoid that kid.
+    sentence: What?! There are two of thsoe grumpy kids? Got to be fast to avoid
+      them...

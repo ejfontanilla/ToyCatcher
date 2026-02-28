@@ -187,7 +187,7 @@ MonoBehaviour:
   maxX: 8
   normalSprite: {fileID: 1593075649719586529, guid: 75d29acdebc1f3540bf384c01593479d, type: 3}
   stunnedSprite: {fileID: 6555681010207831641, guid: 720d0b33fc742f14a9f0f22b97109c23, type: 3}
-  admireSprite: {fileID: 7308581734250003175, guid: 847267af2205b2e4195bf41425d45d8e, type: 3}
+  admireSprite: {fileID: 8954500123521600810, guid: c55489fac4ac24e40acd1833010879ff, type: 3}
   stunDuration: 2
   hitSound: {fileID: 0}
   floorSlideDuration: 0
