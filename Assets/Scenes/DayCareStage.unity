@@ -424,6 +424,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1179327155}
     - target: {fileID: 2739540890227690487, guid: 22e6dc95944b7c44b9e684d2a8ca4260, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739540890227690487, guid: 22e6dc95944b7c44b9e684d2a8ca4260, type: 3}
       propertyPath: bottomFloor
       value: 
       objectReference: {fileID: 921376417}
@@ -1213,11 +1217,11 @@ RectTransform:
   - {fileID: 1775058201}
   m_Father: {fileID: 360039933}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1200, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -20, y: -20}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &696924133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1352,6 +1356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2884777bb99f14848ba9f76c1ada7361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
+  typingSpeed: 0.03
   dialoguePanel: {fileID: 672911597}
   portraitImage: {fileID: 1793934575}
   nameText: {fileID: 710623664}
@@ -2497,7 +2502,7 @@ MonoBehaviour:
   scoreText: {fileID: 149544985}
   normalTimerColor: {r: 1, g: 1, b: 1, a: 1}
   warningTimerColor: {r: 1, g: 0, b: 0, a: 1}
-  hitPenalty: 2
+  hitPenalty: 1
   toySpawner: {fileID: 0}
   introDialogue: {fileID: 11400000, guid: a64f3d7d212de93418d0513b9c8fbe9b, type: 2}
 --- !u!4 &1327619559

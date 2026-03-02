@@ -17,9 +17,7 @@ public class Toy : MonoBehaviour
     void Update()
     {
         if (transform.position.y < destroyYPosition)
-        {
             Destroy(gameObject);
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

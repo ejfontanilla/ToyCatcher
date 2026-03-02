@@ -4,7 +4,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 6f;
 
     public Transform topFloor;
     public Transform bottomFloor;
@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     private bool isStunned = false;
     public bool IsStunned => isStunned;
 
-    public float floorSlideDuration = 0.25f;
+    public float floorSlideDuration = 0f;
     private bool isSliding = false;
 
     void Start()

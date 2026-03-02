@@ -29,16 +29,12 @@ public class UIManager : MonoBehaviour
 
     public void ShowEndGameUI()
     {
-        // Show panel
         if (endGamePanel != null)
             endGamePanel.SetActive(true);
 
         if (levelCompleteText != null)
-        {
             StartCoroutine(LevelCompletePop());
-        }
 
-        // Stickers / confetti
         if (stickerFX != null)
         {
             ParticleSystem fx = Instantiate(stickerFX);
@@ -74,7 +70,6 @@ public class UIManager : MonoBehaviour
         color.a = 0f;
         levelCompleteText.color = color;
 
-        // POP IN
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
@@ -87,7 +82,6 @@ public class UIManager : MonoBehaviour
             yield return null;
         }
 
-        // SETTLE BACK
         elapsed = 0f;
         duration = 0.15f;
 

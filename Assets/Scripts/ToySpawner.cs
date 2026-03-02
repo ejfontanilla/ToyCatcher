@@ -27,11 +27,7 @@ public class ToySpawner : MonoBehaviour
             Quaternion.identity
         );
         if (SoundManager.Instance != null)
-        {
-            SoundManager.Instance.PlaySFX(
-                SoundManager.Instance.toySpawnSound, 0.1f
-            );
-        }
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.toySpawnSound, 0.1f);
     }
 
     public void StopSpawning()

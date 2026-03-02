@@ -26,5 +26,5 @@ MonoBehaviour:
     sentence: 'Oh lookie here! I''m cuter than those rodents! '
   - characterName: Player
     portrait: {fileID: -3020085772389621745, guid: c607f502019573a43bdafbc864ceed02, type: 3}
-    sentence: What?! There are two of thsoe grumpy kids? Got to be fast to avoid
+    sentence: What?! There are two of those grumpy kids? Got to be fast to avoid
       them...

@@ -16,16 +16,11 @@ public class SquirrelSpawner : MonoBehaviour
     void Update()
     {
         if (!GameManager.Instance.isPlaying) return;
-        // Stop spawning if game over
         if (GameManager.Instance != null && GameManager.Instance.IsGameEnded)
             return;
-
-        // Only spawn if there is NO squirrel
         if (currentSquirrel != null)
             return;
-
         timer += Time.deltaTime;
-
         if (timer >= spawnInterval)
         {
             timer = 0f;

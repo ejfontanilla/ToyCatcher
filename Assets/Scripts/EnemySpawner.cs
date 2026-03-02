@@ -32,9 +32,7 @@ public class EnemySpawner : MonoBehaviour
             spawnTimer = 0f;
 
             if (currentEnemyCount < maxEnemies)
-            {
                 SpawnSingleEnemy();
-            }
         }
     }
 
@@ -43,21 +41,13 @@ public class EnemySpawner : MonoBehaviour
         bool spawnTop;
 
         if (!topOccupied && !bottomOccupied)
-        {
             spawnTop = Random.value > 0.5f;
-        }
         else if (!topOccupied)
-        {
             spawnTop = true;
-        }
         else if (!bottomOccupied)
-        {
             spawnTop = false;
-        }
         else
-        {
             return;
-        }
 
         float laneY = spawnTop ? topFloor.position.y : bottomFloor.position.y;
 
@@ -73,9 +63,7 @@ public class EnemySpawner : MonoBehaviour
         enemy.GetComponent<GrumpyKid>().Init(direction, spawnTop);
 
         Vector3 scale = enemy.transform.localScale;
-        scale.x = spawnFromLeft
-            ? -Mathf.Abs(scale.x)
-            : Mathf.Abs(scale.x);
+        scale.x = spawnFromLeft ? -Mathf.Abs(scale.x) : Mathf.Abs(scale.x);
 
         enemy.transform.localScale = scale;
 
@@ -87,11 +75,7 @@ public class EnemySpawner : MonoBehaviour
         currentEnemyCount++;
 
         if (SoundManager.Instance != null)
-        {
-            SoundManager.Instance.PlaySFX(
-                SoundManager.Instance.grumpyEnterSound
-            );
-        }
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.grumpyEnterSound);
     }
 
     void SpawnGrumpyKidInFreeLane()
@@ -99,21 +83,13 @@ public class EnemySpawner : MonoBehaviour
         bool spawnTop;
 
         if (!topOccupied && !bottomOccupied)
-        {
             spawnTop = Random.value > 0.5f;
-        }
         else if (!topOccupied)
-        {
             spawnTop = true;
-        }
         else
-        {
             spawnTop = false;
-        }
 
-        float laneY = spawnTop
-            ? topFloor.position.y
-            : bottomFloor.position.y;
+        float laneY = spawnTop ? topFloor.position.y : bottomFloor.position.y;
 
         bool spawnFromLeft = Random.value > 0.5f;
 
@@ -127,9 +103,7 @@ public class EnemySpawner : MonoBehaviour
         enemy.GetComponent<GrumpyKid>().Init(direction, spawnTop);
 
         Vector3 scale = enemy.transform.localScale;
-        scale.x = spawnFromLeft
-            ? -Mathf.Abs(scale.x)
-            : Mathf.Abs(scale.x);
+        scale.x = spawnFromLeft ? -Mathf.Abs(scale.x) : Mathf.Abs(scale.x);
 
         enemy.transform.localScale = scale;
 
@@ -141,11 +115,7 @@ public class EnemySpawner : MonoBehaviour
         currentEnemyCount++;
 
         if (SoundManager.Instance != null)
-        {
-            SoundManager.Instance.PlaySFX(
-                SoundManager.Instance.grumpyEnterSound
-            );
-        }
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.grumpyEnterSound);
     }
 
     public void NotifyEnemyDestroyed(bool wasTopLane)

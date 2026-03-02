@@ -25,9 +25,7 @@ public class GrumpyKid : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0f;
-
         spriteRenderer = GetComponent<SpriteRenderer>();
-
         spawner = FindObjectOfType<EnemySpawner>();
     }
 
@@ -53,9 +51,7 @@ public class GrumpyKid : MonoBehaviour
         }
 
         if (spriteRenderer != null && endGameSprite != null)
-        {
             spriteRenderer.sprite = endGameSprite;
-        }
     }
 
     void OnBecameInvisible()
@@ -63,10 +59,7 @@ public class GrumpyKid : MonoBehaviour
         if (!isFrozen)
         {
             if (spawner != null)
-            {
                 spawner.NotifyEnemyDestroyed(isTopLane);
-            }
-
             Destroy(gameObject);
         }
     }
@@ -80,9 +73,7 @@ public class GrumpyKid : MonoBehaviour
             PlayerController player = other.GetComponent<PlayerController>();
 
             if (player != null && !player.IsStunned)
-            {
                 GameManager.Instance.PlayerHit();
-            }
         }
     }
 }

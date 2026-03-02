@@ -20,6 +20,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip laneSwitchSound;
     public AudioClip grumpyEnterSound;
     public AudioClip toySpawnSound;
+    private bool isMusicEnabled = true;
+    public bool IsMusicEnabled => isMusicEnabled;
 
     private void Awake()
     {
@@ -63,18 +65,16 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-
     public void PlayMusic(AudioClip clip)
     {
+        if (!isMusicEnabled) return;
         if (clip == null) return;
-
         if (musicSource.clip == clip) return;
 
         musicSource.clip = clip;
         musicSource.loop = true;
         musicSource.Play();
     }
-
 
     public void PlaySFX(AudioClip clip, float volume = 1f)
     {
@@ -85,4 +85,16 @@ public class SoundManager : MonoBehaviour
         sfxSource.pitch = 1f;
     }
 
+    public void ToggleMusic()
+    {
+        isMusicEnabled = !isMusicEnabled;
+
+        PlayerPrefs.SetInt("MusicEnabled", isMusicEnabled ? 1 : 0);
+        PlayerPrefs.Save();
+
+        if (!isMusicEnabled)
+            musicSource.Stop();
+        else if (musicSource.clip != null)
+            musicSource.Play();
+    }
 }

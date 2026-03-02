@@ -5,29 +5,19 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
     public float gameTime = 60f;
     private float timer;
-
     public bool isPlaying = false;
-
     public int score = 0;
-
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI scoreText;
-
     public Color normalTimerColor = Color.white;
     public Color warningTimerColor = Color.red;
-
     private bool isFlashing = false;
-
-    public int hitPenalty = 2;
+    public int hitPenalty = 1;
     private PlayerController player;
-
     public bool IsGameEnded { get; private set; }
-
     public ToySpawner toySpawner;
-
     public DialogueData introDialogue;
 
     void Awake()
@@ -44,15 +34,12 @@ public class GameManager : MonoBehaviour
         timer = gameTime;
         timerText.color = normalTimerColor;
         DialogueManager.Instance.StartDialogue(introDialogue);
-        //StartGame();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
+        if (Input.GetKeyDown(KeyCode.E)) 
             EndGame();
-        }
 
         if (!isPlaying) return;
 
@@ -60,9 +47,7 @@ public class GameManager : MonoBehaviour
         UpdateTimerUI();
 
         if (timer <= 0)
-        {
             EndGame();
-        }
     }
 
     public void StartGame()
@@ -74,7 +59,7 @@ public class GameManager : MonoBehaviour
     {
         if (IsGameEnded) return;
         IsGameEnded = true;
-
+        HighScoreManager.Instance.SaveHighScore(score);
         SoundManager.Instance.PlaySFX(
         SoundManager.Instance.gameOverSound);
 
@@ -101,21 +86,17 @@ public class GameManager : MonoBehaviour
     public void AddScore(int amount)
     {
         score += amount;
+        if (score <= 0)
+            score = 0;
         UpdateScoreUI();
         if (amount > 0)
-        {
-            SoundManager.Instance.PlaySFX(
-                SoundManager.Instance.catchSound
-            );
-        }
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.catchSound);
     }
 
     private void UpdateScoreUI()
     {
         if (scoreText != null)
-        {
             scoreText.text = "Score: " + score;
-        }
     }
 
     public void PlayerHit()
@@ -123,11 +104,7 @@ public class GameManager : MonoBehaviour
         AddScore(-hitPenalty);
 
         if (SoundManager.Instance != null)
-        {
-            SoundManager.Instance.PlaySFX(
-                SoundManager.Instance.hitSound
-            );
-        }
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.hitSound);
 
         player.React(player.stunnedSprite); ;
     }
@@ -164,18 +141,13 @@ public class GameManager : MonoBehaviour
     void FreezePlayer()
     {
         if (player != null)
-        {
             player.Freeze();
-        }
     }
 
     public void Freeze()
     {
         enabled = false;
     }
-
-
-
 
     void StopToySpawning()
     {
@@ -189,13 +161,11 @@ public class GameManager : MonoBehaviour
 
     public void RestartStage()
     {
-        //SoundManager.Instance.PlayUIClick();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void QuitToStageSelect()
     {
-        //SoundManager.Instance.PlayUIClick();
         SceneManager.LoadScene("StageSelect");
     }
 
